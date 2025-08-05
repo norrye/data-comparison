@@ -1,0 +1,30 @@
+# Data Comparison Project
+
+This project compares Alivedata Core with other data sources using modern Python data analysis tools.
+
+## Project Structure
+- Poetry for dependency management
+- DuckDB for analytical database operations
+- Modern visualization stack (matplotlib, seaborn, plotly, bokeh)
+- Data processing with pandas, polars, and fireducks
+- Code quality tools (ruff, black)
+
+## Key Components
+- `/src/data/` - ETL operations
+- `/src/models/` - Model training and prediction
+- `/src/visualization/` - Plotting utilities
+- `/config/` - DuckDB and project settings
+- `/notebooks/` - Jupyter analysis notebooks
+
+## Dependencies
+Main packages: dabbler, pandas, polars, fireducks, matplotlib, seaborn, plotly, bokeh, datashader, duckdb, dataprofiler, pydantic, loguru, weasyprint, black, ruff
+
+## Database Configuration
+Uses DuckDB with 50GB memory limit, 6 threads, spatial and ICU extensions enabled.
+Database file: `data/processed/data_comparison.duckdb`
+
+## Development Workflow
+1. Poetry for environment management
+2. Git for version control (shell for init, VSCode for daily use)
+3. Jupyter Lab for interactive analysis
+4. pytest for testing

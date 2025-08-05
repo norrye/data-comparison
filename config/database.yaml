@@ -1,0 +1,42 @@
+# DuckDB Database Configuration
+
+# Main database file path
+database_path: "data/processed/data_comparison.duckdb"
+
+# Memory database for temporary operations
+memory_db: ":memory:"
+
+# Connection settings
+connection:
+  read_only: false
+  threads: 4
+  memory_limit: "2GB"
+
+# Database-specific settings
+settings:
+  # Enable progress bar for long-running queries
+  enable_progress_bar: true
+  
+  # Optimize for analytical workloads
+  default_order: "ASC"
+  
+  # Memory settings
+  max_memory: "80%"
+  temp_directory: "data/interim/temp"
+
+# Schema configurations
+schemas:
+  raw: "raw_data"
+  processed: "processed_data"
+  staging: "staging"
+
+# Common table configurations
+tables:
+  # Example table configurations
+  source_data:
+    schema: "raw_data"
+    compression: "gzip"
+  
+  comparison_results:
+    schema: "processed_data"
+    compression: "zstd"

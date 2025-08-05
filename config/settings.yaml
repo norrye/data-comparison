@@ -1,0 +1,27 @@
+# /data/projects/data_comparison Settings
+
+project:
+  name: "/data/projects/data_comparison"
+  version: "1.0.0"
+  description: "Project description"
+
+data:
+  raw_path: "data/raw"
+  interim_path: "data/interim"
+  processed_path: "data/processed"
+  external_path: "data/external"
+
+models:
+  path: "models"
+  random_state: 42
+  test_size: 0.2
+
+logging:
+  level: "INFO"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
+  file: "logs/application.log"
+
+visualization:
+  style: "seaborn"
+  figure_size: [12, 8]
+  dpi: 300
